@@ -1,6 +1,6 @@
 # infra_as_code
 
-This folder contains a terraform example to spawn a server on AWS. It uses **Datadog tool** for RAM and CPU monitoring.
+This contains a terraform example to spawn a server on AWS. It uses **Datadog tool** for RAM and CPU monitoring.
 
 **First, to configure Datadog -** 
 
@@ -27,3 +27,4 @@ terrafrom init
 terrafrom plan
 terrafrom apply
 ```
+** BEFORE RUNNING THE COMMANDS EDIT THE CREDENTIAL FILE, API_KEY and APP_KEY. **
