@@ -5,6 +5,7 @@ variable "region" {
 
 variable "shared_credentials_file" {
   default = "C:\\Users\\{user_name}\\.aws\\credentials"
+	# AWS credentials file
 }
 
 variable "profile" {
@@ -56,6 +57,7 @@ connection={
   count = 2
   key_name = "terraform"
 security_groups= ["launch6"]  
+	# Security group of AWS
  
   tags {
     Name = "terraform"
