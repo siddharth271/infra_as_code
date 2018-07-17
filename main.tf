@@ -52,7 +52,7 @@ connection={
     }
 
   ami = "ami-2d39803a"
-  instance_type = "t2.micro"
+  instance_type = "t1.nano"
   count = 2
   key_name = "terraform"
 security_groups= ["launch6"]  
@@ -65,14 +65,14 @@ resource "datadog_monitor" "cpu_monitor" {
   name = "cpu usage high"
   type = "metric alert"
   message = "CPU usage alert. Notify: @email@example.com"
-  query = "avg(last_1m):avg:system.cpu.system{*} by {host} > 0"
+  query = "avg(last_2m):avg:system.cpu.system{*} by {host} > 90"
 
   
 }
 
 resource "datadog_monitor" "disk_usage" {
   name           = "Disk usage high"
-  query          = "avg(last_1m):max:system.disk.in_use{*} by {host} * 100 > 0"
+  query          = "avg(last_5m):max:system.disk.in_use{*} by {host} * 100 > 80"
   type           = "metric alert"
   message = "RAM usage alert. Notify: @email@example.com"
   
