@@ -28,3 +28,4 @@ terrafrom plan
 terrafrom apply
 ```
 ** BEFORE RUNNING THE COMMANDS EDIT THE CREDENTIAL FILE, API_KEY and APP_KEY. **
+for alert, ssh to the machine and start the agent. Refer the link for command - (https://app.datadoghq.com/account/settings#agent)
